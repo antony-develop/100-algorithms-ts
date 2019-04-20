@@ -1,5 +1,12 @@
 function chunkyMonkey(arr: any[], size: number): any[][] {
+    const result = [];
+    let count = 0;
 
+    while (count < arr.length) {
+        result.push(arr.slice(count, count += size));
+    }
+
+    return result;
 }
 
 console.log(chunkyMonkey(["a", "b", "c", "d"], 2));
