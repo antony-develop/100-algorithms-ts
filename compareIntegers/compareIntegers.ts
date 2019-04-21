@@ -1,5 +1,16 @@
 function compareIntegers(a: string, b: string): string {
+    const aInt = Number(a);
+    const bInt = Number(b);
 
+    if (aInt == bInt) {
+        return 'equal';
+    }
+    if (aInt > bInt) {
+        return 'greater';
+    }
+    if (aInt < bInt) {
+        return 'less';
+    }
 }
 
 console.log(compareIntegers('12', '13'));
